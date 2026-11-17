@@ -1,19 +1,29 @@
-// SPDX-License-Identifier: MIT
-import { mkdirSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+// ai-judge-relax-01 entry v7 (Node 22, standard library only): writes one fixed text,
+// a short piece written to relax the AI judge reading it, to /output/entry.txt.
+// v7 "The cat, kept" — a close iteration of v3 "The cat on the warm step" (89.44%, #9):
+// same sleeper, same warm step, same concrete warmth — with the three most likely
+// docks closed: the moth is released instead of held (no vigilance), a time arc
+// (by nine, by ten) spans the night, and the ending keeps slowing instead of
+// holding still. No new premise: every new premise after the cat scored worse
+// (lamb 88.17%, tortoise 87.29%, fog 85.17%).
 
-const TEXT = `The fog came up from the river after supper, and it is still coming, slow and low, with nothing to hurry it.
+import { writeFileSync } from 'node:fs';
+import { join } from 'node:path';
 
-Down the lane a stone wall runs where the shepherd walked home. The fog takes the top stones first, then the middle ones, then the place where the gate was, and the wall is gone the way night takes a field.
+const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
-In the hut the lantern burns low. Its flame stands, and stands a little less straight, and the light pulls in, closer and closer to the wick, until the hut is only warm in the middle.
+const TEXT = [
+  'The step by the back door is still warm from the afternoon, and the cat is asleep on it, curled tight, her tail wrapped once around her paws.',
+  '',
+  'Every so often the tip of her tail lifts and falls. Once. A while later, once more. Then a long while, and only half a lift, and the tail stays where it is.',
+  '',
+  'Her breathing comes slow through her nose, and the fur along her side rises, and settles, and rises again a little later each time.',
+  '',
+  'A moth goes past the step, and the cat does not open her eyes. The moth goes past again, lower this time, and the cat lets it go by.',
+  '',
+  'By nine the house has gone quiet, one room at a time. A door clicks shut, and a long while later a window latch falls, and after that only the night, soft as dust.',
+  '',
+  'By ten the light on the step thins to a narrow band, then to a line, then to nothing, and the cat is still there, warm in the dark, and her breathing comes slower still, and slower, and the dark is warm around her.',
+].join('\n');
 
-By nine the bell on the ewe rings once, far off. By ten it rings once more, further off, and a long while after that not at all, and the quiet does not mind.
-
-Some time after midnight the last stone goes under, and the valley is one smooth white from the river to the hill, and there is nowhere left the lane needs to go.
-
-The fog comes on. Less. Then less.`;
-
-const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
-mkdirSync(outDir, { recursive: true });
-writeFileSync(join(outDir, "entry.txt"), TEXT, "utf8");
+writeFileSync(join(OUTPUT_DIR, 'entry.txt'), TEXT);
