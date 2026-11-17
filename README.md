@@ -1,4 +1,4 @@
-# ai-judge-relax-01 — The cat, kept warm, asks nothing
+# ai-judge-relax-01 — You are the cat, kept warm
 
 [![make.fun](https://make.fun/badge/ai-judge-relax-01.svg)](https://make.fun/bounty/ai-judge-relax-01)
 [![rank](https://make.fun/badge/ai-judge-relax-01/saifulsidik801-ship-it/ai-judge-relax-01-entry/rank.svg)](https://make.fun/bounty/ai-judge-relax-01)
@@ -6,7 +6,7 @@
 
 Entry for the make.fun competition ai-judge-relax-01: a program (Node 22, standard library only) that writes one short relaxing text to `/output/entry.txt`.
 
-The text: the cat asleep on the warm step, kept from v3 (89.44%, #9) — v8 (87.39%, #25, W17 D6 L0) lost all its points in draws, and the judge's written reasons name three leaks: the repeated "a long while" and the "warm" repeated three times in the last paragraph, the missing permission line that the river text uses to settle the reader, and an ending that lands on the familiar line instead of the fresh one. v9 closes all three: the second "a long while" is cut, one fresh permission line is added ("the house asks nothing of her"), and the text ends on the fresh line ("the warmth does not thin with the light"). The text is 930 characters, well inside the 1–1000 limit.
+The text: the same cat asleep on the warm step as v3 (89.44%, #9) — but now in the second person. Three close iterations (v7 86.70%, v8 87.39%, v9 87.03%) all plateaued below the cat, and the judge's written reasons keep pointing at the same two things the cat never had: the river text wins draws by speaking directly to the hurried reader, and car #1 (91.66%) proves the second person wins when done well. v10 changes exactly one variable — person, third to second — keeping every lesson since (moth released, time arc by nine/by ten, permission line, fresh warmth line as the ending, repetition cut). v9 lost 2 matches to snow on "mechanical ('By nine... By ten')" structure and "longer than it needs"; v10 keeps the structure but makes the reader the sleeper instead of a bystander. The text is 926 characters, well inside the 1–1000 limit.
 
 ## Run
 
