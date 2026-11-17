@@ -1,18 +1,19 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const text = `The step by the back door is still warm from the afternoon, and the cat is asleep on it, curled tight, her tail wrapped once around her paws.
+const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 
-Every so often the tip of her tail lifts and falls. Once. A while later, once more. Then a long while, and only half a lift, and the tail stays where it is.
+const text = `The tortoise has been crossing the garden since the sun was high, and now the sun is low, and he is still crossing.
 
-Her breathing comes slow through her nose, and the fur along her side rises, and settles, and rises again a little later each time.
+His head comes out of his shell, and goes back in, and comes out again a little less far, and the going back takes longer each time.
 
-A moth goes past the step, and the cat does not open her eyes. The moth goes past again, lower this time, and the cat's ear turns toward it, and does not turn back.
+A lettuce leaf lies in his path. His jaws close on it once, and once more after a while, and then after a longer while, and the leaf is still there, mostly.
 
-Behind her the house has gone quiet, one room at a time. A door clicks shut, and a long while later a window latch falls, and after that only the night, soft as dust.
+An ant crosses his shell, and another follows it, slower, and a third does not follow at all.
 
-The light on the step thins to a narrow band, then to a line, then to nothing, and the cat is still there, warm in the dark, and the dark is warm around her.`;
+The sun drops behind the fence, and the light goes out of the garden by degrees, and the tortoise is warm on top and cool underneath, and he does not hurry the difference.
 
-const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
-mkdirSync(outDir, { recursive: true });
-writeFileSync(join(outDir, "entry.txt"), text, "utf8");
+By evening he has reached the shade of the rosemary. He draws his head in, and his feet in, and the shell sits in the dark, and the shell keeps the last of the sun, and gives it back a little at a time, and a little less, and less.`;
+
+mkdirSync(OUTPUT_DIR, { recursive: true });
+writeFileSync(join(OUTPUT_DIR, "entry.txt"), text, "utf8");
