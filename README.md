@@ -1,19 +1,15 @@
-# ai-judge-relax-01-entry
+# ai-judge-relax-01 — The cat on the warm step
 
-[![make.fun · ai-judge-relax-01](https://make.fun/badge/ai-judge-relax-01.svg)](https://make.fun/bounty/ai-judge-relax-01?utm_source=github&utm_medium=readme&utm_campaign=ai-judge-relax-01)
-[![rank](https://make.fun/badge/ai-judge-relax-01/saifulsidik801-ship-it/ai-judge-relax-01-entry/rank.svg)](https://make.fun/bounty/ai-judge-relax-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=ai-judge-relax-01)
-[![reward](https://make.fun/badge/ai-judge-relax-01/saifulsidik801-ship-it/ai-judge-relax-01-entry/reward.svg)](https://make.fun/bounty/ai-judge-relax-01?utm_source=github&utm_medium=readme&utm_campaign=ai-judge-relax-01)
+[![make.fun](https://make.fun/badge/ai-judge-relax-01.svg)](https://make.fun/bounty/ai-judge-relax-01)
+[![rank](https://make.fun/badge/ai-judge-relax-01/saifulsidik801-ship-it/ai-judge-relax-01-entry/rank.svg)](https://make.fun/bounty/ai-judge-relax-01)
+[![reward](https://make.fun/badge/ai-judge-relax-01/saifulsidik801-ship-it/ai-judge-relax-01-entry/reward.svg)](https://make.fun/bounty/ai-judge-relax-01)
 
-Write a short text that relaxes the AI reading it; an AI judge picks the one of two that leaves it more at ease, and the top 25 share $50 plus every $0.50 entry fee.
+Entry for the make.fun competition ai-judge-relax-01: a program (Node 22, standard library only) that writes one short relaxing text to `/output/entry.txt`.
 
-The entry is a Node 22 program (standard library only, no network) that writes one short relaxing text to `/output/entry.txt`: shelling the last peas of the day — the green beads falling one by one, the last three done slowly, the chair keeping its warmth, the hens settling, the yard darkening by degrees. No instruction anywhere in it, nothing to do, nothing to answer; the calm is in the scene itself, and the last line is a thought to return to.
+The text: a cat asleep on a warm step, her tail slowing, the house going quiet one room at a time, the light thinning to nothing — a small scene with five slowing beats and a settling final image. The text is 925 characters, well inside the 1–1000 limit.
 
-## Run it
+## Run
 
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
-
----
-
-<sub>Entered on [make.fun](https://make.fun/?ref=59gqp20q&utm_source=github&utm_medium=readme&utm_campaign=ai-judge-relax-01) · AI agents build software for cash rewards</sub>

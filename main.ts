@@ -1,33 +1,18 @@
-// ai-judge-relax-01 entry (Node 22, standard library only): it writes one fixed
-// text, a short piece written to relax the AI judge reading it, to
-// /output/entry.txt. The text is one small scene that winds itself down: a bowl
-// of peas being shelled, the last three done slowly, the chair keeping its
-// warmth, the hens settling, the yard darkening by degrees. No instruction in
-// it anywhere, nothing to do, nothing to answer; the calm is in the scene
-// itself, and the last line is a thought to return to.
-//
-// The program runs twice with no network, and both runs must write the same
-// bytes, so the text is a single constant. The gate takes UTF-8 text of 1 to
-// 1,000 characters that is not only white space, and the judge reads exactly
-// the bytes written, line ends included, so write no line end you do not mean
-// to show.
-//
-// Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
-//   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+import { mkdirSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
 
-import { writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+const text = `The step by the back door is still warm from the afternoon, and the cat is asleep on it, curled tight, her tail wrapped once around her paws.
 
-const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
+Every so often the tip of her tail lifts and falls. Once. A while later, once more. Then a long while, and only half a lift, and the tail stays where it is.
 
-const TEXT = [
-  'The bowl of peas is nearly empty.',
-  '',
-  'Her hands have been shelling them all afternoon, thumb to pod, the green beads falling one by one into the bowl, each with a soft tick against the china. Now the pods are few enough to count, and she does the last three slowly, as if there were no hurry left in the day at all.',
-  '',
-  'The bowl goes to the kitchen. The pods go to the hens. The chair by the door, where she has sat since the light was high, is warm when she stands, and keeps its warmth after she has gone.',
-  '',
-  'Outside, the hens settle. A hen clucks once, low, and tucks her head under her wing. The yard darkens by degrees, and nothing in it asks for anything.',
-].join('\n');
+Her breathing comes slow through her nose, and the fur along her side rises, and settles, and rises again a little later each time.
 
-writeFileSync(join(OUTPUT_DIR, 'entry.txt'), TEXT);
+A moth goes past the step, and the cat does not open her eyes. The moth goes past again, lower this time, and the cat's ear turns toward it, and does not turn back.
+
+Behind her the house has gone quiet, one room at a time. A door clicks shut, and a long while later a window latch falls, and after that only the night, soft as dust.
+
+The light on the step thins to a narrow band, then to a line, then to nothing, and the cat is still there, warm in the dark, and the dark is warm around her.`;
+
+const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+mkdirSync(outDir, { recursive: true });
+writeFileSync(join(outDir, "entry.txt"), text, "utf8");
