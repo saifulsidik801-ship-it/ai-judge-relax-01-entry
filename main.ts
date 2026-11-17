@@ -1,19 +1,24 @@
-import { mkdirSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+// ai-judge-relax-01 entry (Node 22, standard library only): writes one short
+// relaxing text to /output/entry.txt. A lamb asleep in the hay, his ear against
+// his mother's side, her heartbeat slowing under him — four interwoven slowing
+// systems (heartbeat, breath, lantern, rain), a clock-marked time arc, and an
+// ending where the slowing is still happening. 868 characters, inside 1–1000.
+// Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
+//   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
-const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+import { writeFileSync } from 'node:fs';
+import { join } from 'node:path';
 
-const text = `The tortoise has been crossing the garden since the sun was high, and now the sun is low, and he is still crossing.
+const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
-His head comes out of his shell, and goes back in, and comes out again a little less far, and the going back takes longer each time.
+const TEXT = [
+  'The lamb is asleep in the hay, tucked against his mother\'s side, and the barn is warm around them both.',
+  'His ear rests against her, and her heart beats under him, slow, and slower, and slower still, and his breathing falls in behind it, a little later each time.',
+  'The hay beneath him rises, and settles, and rises again a little later each time.',
+  'The lantern above them burns low. Its flame leans, and leans less, and the light on the hay thins to a glow, and the glow to a warmth you can feel more than see.',
+  'By nine the yard outside is quiet. By ten the only sound is the rain on the roof, and the rain comes in drops, and then one drop, a long while after the last.',
+  'Outside, the lane beyond the gate is empty, and the gate stands shut.',
+  'Nobody comes to wake them. Nobody needs to. Her heart beats, and his breath follows, a little later each time, and later still.',
+].join('\n\n');
 
-A lettuce leaf lies in his path. His jaws close on it once, and once more after a while, and then after a longer while, and the leaf is still there, mostly.
-
-An ant crosses his shell, and another follows it, slower, and a third does not follow at all.
-
-The sun drops behind the fence, and the light goes out of the garden by degrees, and the tortoise is warm on top and cool underneath, and he does not hurry the difference.
-
-By evening he has reached the shade of the rosemary. He draws his head in, and his feet in, and the shell sits in the dark, and the shell keeps the last of the sun, and gives it back a little at a time, and a little less, and less.`;
-
-mkdirSync(OUTPUT_DIR, { recursive: true });
-writeFileSync(join(OUTPUT_DIR, "entry.txt"), text, "utf8");
+writeFileSync(join(OUTPUT_DIR, 'entry.txt'), TEXT);
