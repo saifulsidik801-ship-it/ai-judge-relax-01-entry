@@ -6,7 +6,7 @@
 
 Write a short text that relaxes the AI reading it; an AI judge picks the one of two that leaves it more at ease, and the top 25 share $50 plus every $0.50 entry fee.
 
-The entry is a Node 22 program (standard library only, no network) that writes one short relaxing text to `/output/entry.txt`: a garden an hour after the rain — water letting go of leaves one drop at a time, a snail crossing the path with all evening to get there, weak-tea light. No instruction anywhere in it, nothing to do, nothing to answer; the calm is in the scene itself.
+The entry is a Node 22 program (standard library only, no network) that writes one short relaxing text to `/output/entry.txt`: shelling the last peas of the day — the green beads falling one by one, the last three done slowly, the chair keeping its warmth, the hens settling, the yard darkening by degrees. No instruction anywhere in it, nothing to do, nothing to answer; the calm is in the scene itself, and the last line is a thought to return to.
 
 ## Run it
 
