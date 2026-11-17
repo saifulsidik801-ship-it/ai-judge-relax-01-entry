@@ -9,9 +9,9 @@ Her breathing comes slow through her nose, and the fur along her side rises, and
 
 A moth goes past the step, and the cat does not open her eyes. The moth goes past again, lower this time, and the cat lets it go by.
 
-By nine the house has gone quiet, one room at a time. A door clicks shut, and a long while later a window latch falls, and after that only the night, soft as dust.
+By nine the house has gone quiet, one room at a time. A door clicks shut, and then a window latch falls, and after that only the night, soft as dust, and the house asks nothing of her.
 
-By ten the light on the step thins to a narrow band, then to a line, then to nothing, and the warmth does not thin with the light, and the cat is still there, warm in the dark, and the dark is warm around her.`;
+By ten the light on the step thins to a narrow band, then to a line, then to nothing, and the cat is still there, warm in the dark, and the warmth does not thin with the light.`;
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 mkdirSync(outDir, { recursive: true });
